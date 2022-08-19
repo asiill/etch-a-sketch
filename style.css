@@ -5,12 +5,25 @@
 
 body {
     min-height: 100vh;
+    margin: 0;
     background-color: #d2ddf1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.left {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .gridContainer {
@@ -38,6 +51,7 @@ body {
     -webkit-appearance: none;
     width: 100%;
     height: 15px;
+    margin-top: 15px;
     border-radius: 5px;
     background: #d3d3d3;
     outline: none;
@@ -74,5 +88,23 @@ body {
 
 .colourModes {
     display: flex;
+    flex-direction: column;    
     gap: 10px;
+}
+
+#resetGrid {
+    background-color: #04235c; 
+    border: none;
+    color: #d3d3d3;
+    text-align: center;
+    font-size: 12px;
+    padding: 12px 12px;
+    opacity: 0.6;
+    transition: 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#resetGrid:hover {
+    opacity: 1;
 }

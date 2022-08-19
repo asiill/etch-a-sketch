@@ -9,25 +9,55 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="gridContainer">
-        <div id="grid"></div>
+    
+    <div class="left">
+
+        <h1>Etch a Sketch</h1>
+        
+        <div class="gridContainer">
+            <div id="grid"></div>
+        </div>
+
+        <div class="slideContainer">
+            <input type="range" min="2" max="80" value="16" class="slider" id="gridSlider">
+            <div id="sliderValue"></div>
+        </div>
+
     </div>
 
-    <div class="slideContainer">
-        <input type="range" min="2" max="80" value="16" class="slider" id="gridSlider">
-        <div id="sliderValue"></div>
-    </div>
+    <div class="right">
 
-    <div class="colourModes">
-        <input type="radio" id="black" name="mode" value="black">
-        <label for="black">Black</label>
+        <div class="colourModes">
+            <div>
+                <input type="radio" id="black" name="mode" value="black">
+                <label for="black">Black</label>
+            </div>
 
-        <input type="radio" id="colours" name="mode" value="colours">
-        <label for="colours">Multicoloured</label><br>
-    </div>
+            <div>
+                <input type="radio" id="colours" name="mode" value="colours">
+                <label for="colours">Random</label>
+            </div>
 
-    <div class="resetGrid">
-        <button id="reset">Reset Grid</button>
+            <div>
+                <input type="radio" id="grayscale" name="mode" value="grayscale">
+                <label for="grayscale">Grayscale</label>
+            </div>
+
+            <div>
+                <input type="radio" id="eraser" name="mode" value="eraser">
+                <label for="eraser">Eraser</label>
+            </div>
+
+            <div>
+                <label for="customColour">Custom colour:</label>
+                <input type="color" id="customColour" name="mode" value="#FF0000">
+            </div>
+        </div>
+
+        <div class="reset">
+            <button id="resetGrid">Reset Grid</button>
+        </div>
+
     </div>
 
 </body>

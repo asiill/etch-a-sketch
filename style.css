@@ -75,8 +75,8 @@ body {
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 1.2em;
+    height: 1.2em;
     border-radius: 50%;
     background: #000000;
     outline: 1px solid #f5f5f5;
@@ -84,8 +84,8 @@ body {
 }
   
 .slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
+    width: 1.2em;
+    height: 1.2em;
     border-radius: 50%;
     background: #000000;
     outline: 1px solid #f5f5f5;
@@ -99,19 +99,62 @@ body {
 .colourModes {
     display: flex;
     flex-direction: column;    
+    gap: 15px;
+}
+
+.colourModes > div {
+    display: flex;
     gap: 10px;
 }
 
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #f5f5f5;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1em;
+    height: 1em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    transform: translateY(0.1em);
+
+    display: grid;
+    place-content: center;
+  }
+
+  input[type="radio"]::before {
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #000000;
+  }
+  
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+
+  input[type="radio"]:focus {
+    outline: 0.15em solid currentColor;
+    outline-offset: 0.2em;
+  }
+
 #resetGrid {
+    color: #d3d3d3;
     background-color: #000000; 
     border: none;
-    color: #d3d3d3;
-    text-align: center;
-    font-size: 12px;
+    border-radius: 5px;
     padding: 12px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
     opacity: 0.7;
     transition: 0.3s;
-    text-decoration: none;
     cursor: pointer;
 }
 

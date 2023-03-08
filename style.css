@@ -64,12 +64,13 @@ body {
     outline: 1px solid transparent;
     outline: none;
     opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
 }
 
 .slider:hover {
     opacity: 1;
+    transform: scale(1.05);
 }
 
 .slider::-webkit-slider-thumb {
@@ -154,7 +155,7 @@ input[type="radio"] {
     text-align: center;
     text-decoration: none;
     opacity: 0.7;
-    transition: 0.3s;
+    transition: 0.2s;
     cursor: pointer;
 }
 

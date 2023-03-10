@@ -19,6 +19,16 @@ body {
     gap: 20px;
 }
 
+h1 {
+    position: relative;
+    left: 0;
+    transition: left ease 0.5s;
+}
+
+h1:hover {
+    left: -10px;
+}
+
 .left-container {
     display: flex;
     flex-direction: column;

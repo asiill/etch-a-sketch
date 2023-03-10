@@ -2,25 +2,13 @@
 Etch-a-Sketch
 */
 
+// Create variables to store html elements
 const grid = document.querySelector("#grid");
-
 const gridSlider = document.querySelector("#gridSlider");
 const sliderValue = document.querySelector("#sliderValue");
 sliderValue.textContent = gridSlider.value;
-
 const customColourSelector = document.querySelector("#customColour");
 const resetGrid = document.querySelector("#resetGrid");
-
-function createGrid (rows, columns){
-    grid.style.setProperty("--rows", rows);
-    grid.style.setProperty("--columns", columns);
-    for (let i = 0; i < rows * columns; i++){
-        let cell = document.createElement("div");
-        cell.classList.add("cell");
-        cell.addEventListener("mouseenter", selectColour);
-        grid.appendChild(cell);
-    }
-}
 
 // Initialize the grid using the default slider value (16)
 createGrid(gridSlider.value, gridSlider.value);
@@ -62,6 +50,18 @@ function uncheckRadio() {
     checkedRadioItems.forEach(r => {
         r.checked = false;
     });
+}
+
+// This function creates the grid
+function createGrid (rows, columns){
+    grid.style.setProperty("--rows", rows);
+    grid.style.setProperty("--columns", columns);
+    for (let i = 0; i < rows * columns; i++){
+        let cell = document.createElement("div");
+        cell.classList.add("cell");
+        cell.addEventListener("mouseenter", selectColour);
+        grid.appendChild(cell);
+    }
 }
 
 // This function selects a colour based on which radio item is checked
